@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    
+    <com.jeremyfeinstein.slidingmenu.lib.SlidingMenu 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/slidingmenulayout"
+        >
+        
+        
+      <FrameLayout 
+          android:id="@+id/navi_head"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          >
+          <ImageButton 
+              android:id="@+id/id_btn_myinfo"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:clickable="true"
+              />
+          
+          <ImageView 
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/test_img"/>
+          
+          
+      </FrameLayout>  
+        
+      <ListView 
+          android:id="@+id/menulistview"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="8dp"
+          android:divider="#40E0D0"
+          android:dividerHeight="0.01dp"
+          android:scrollbars="none"
+          android:layout_below="@id/navi_head"
+          >
+      </ListView> 
+    </com.jeremyfeinstein.slidingmenu.lib.SlidingMenu>
+
+</LinearLayout>

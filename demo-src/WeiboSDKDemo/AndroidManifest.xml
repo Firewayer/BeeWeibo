@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sina.weibo.sdk.demo"
+    android:versionCode="8"
+    android:versionName="3.1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于调用 JNI -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />    
+
+    <application
+        
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.sina.weibo.sdk.demo.util.MyApplication" >
+        
+        
+        <!-- 主 Activity -->
+        <activity
+            android:name="com.sina.weibo.sdk.demo.project.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.sina.weibo.sdk.demo.project.SendStatusActivity"
+            android:label="发送微博"></activity>
+        <activity android:name="com.sina.weibo.sdk.demo.project.LoginActivity"
+            android:label="注册"></activity>
+        <activity android:name="com.sina.weibo.sdk.demo.project.CommentsActivity"
+            android:label="评论"
+            android:configChanges="keyboardHidden|orientation"></activity>
+        <activity android:name="com.sina.weibo.sdk.demo.project.MainActivity"
+            android:label="首页"></activity>
+        <activity android:name="com.sina.weibo.sdk.demo.project.UserActivity"
+            android:launchMode="singleTask"
+            android:label="用户信息"></activity>
+        
+        <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" 
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>
+    </application>
+
+</manifest>
